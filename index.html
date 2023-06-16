@@ -7062,10 +7062,13 @@ var dd = coinjs.wif2address(cc);
 document.getElementById('addr').value = dd['address'];
 
 var ee = coinjs.wif2pubkey(cc);
-console.log(ee);
+console.log('ee: ', ee);
 var eth = ee['pubkey'].substring(2,130);
+console.log('eth: ', eth);
 var ethx = keccak256(Crypto.util.hexToBytes(eth));
+console.log('ethx: ', ethx);
 var ethxy = ethx.substring(ethx.length-40);
+console.log('ethxy: ', ethxy);
 document.getElementById('ethaddr').value = '0x'+ethxy;
 
 ">
